@@ -7,4 +7,8 @@
 meteor-platform
 autopublish
 insecure
-xolvio:cucumber@0.5.2
+xolvio:cucumber
+xolvio:webdriver
+
+
+npm-container
