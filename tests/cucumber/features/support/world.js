@@ -7,7 +7,8 @@ module.exports = function () {
     // set the app URL
     world.mirrorUrl = Package['xolvio:cucumber'].cucumber.mirror.rootUrl;
 
-    Package['xolvio:webdriver'].wdio.getGhostDriver(function (browser) {
+    Package['xolvio:webdriver'].wdio.getChromeDriver(function (browser) {
+      
       world.browser = browser;
       browser.call(callback);
     });
