@@ -8,6 +8,7 @@ module.exports = function () {
     world.mirrorUrl = Package['xolvio:cucumber'].cucumber.mirror.rootUrl;
 
     Package['xolvio:webdriver'].wdio.getGhostDriver(function (browser) {
+      //options = _.defaults(options, defaultOptions);
       world.browser = browser;
       browser.call(callback);
     });

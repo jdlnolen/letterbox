@@ -7,4 +7,4 @@ Feature: Authorable Landing Page
     Scenario: Visitors can see a book heading
       Given I am a new visitor
       When I navigate to the landing page
-      Then I see the heading "Welcome to Meteor!"
+      Then I see the heading "My Book"
