@@ -4,6 +4,23 @@ module.exports = function () {
 
   var helper = this;
 
+  this.Given(/^The setting with key "([^"]*)" and value "([^"]*)" has been set$/, function (key, value, callback) {
+    function _getPublicMeteorSettingForKey (key) {
+    function getValueByKey (o, k) { return o[k] };
+    return key.split(".").reduce(getValueByKey, Meteor.settings);
+    }
+
+    try {
+        var publicMeteorSettingForKey = _getPublicMeteorSettingForKey(key);
+        assert.equal(publicMeteorSettingForKey, value);
+        callback();
+    } catch (e) {
+        callback.fail(e.message);
+    }
+      
+      
+  });    
+    
   this.Given(/^I am a new visitor$/, function (callback) {
     callback();
   });
@@ -21,4 +38,14 @@ module.exports = function () {
         callback();
       });
   });
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
 };

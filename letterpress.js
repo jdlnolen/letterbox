@@ -14,6 +14,11 @@ if (Meteor.isClient) {
       Session.set('counter', Session.get('counter') + 1);
     }
   });
+    
+  UI.registerHelper('bookTitle', function() {
+    return Meteor.settings.public.book.title;
+  });    
+    
 }
 
 if (Meteor.isServer) {
