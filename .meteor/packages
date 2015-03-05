@@ -12,3 +12,5 @@ xolvio:webdriver@0.5.2
 
 
 npm-container
+velocity:html-reporter
+sanjo:jasmine
